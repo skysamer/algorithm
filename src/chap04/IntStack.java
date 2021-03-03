@@ -25,28 +25,28 @@ public class IntStack {
 	}
 	// ↑ 예외처리 메서드
 	
-	public int push(int x) throws OverflowIntStackException{  //스택에 데이터를 넣는 메서드
+	public int push(int x) throws OverflowIntStackException{  // 1)
 		if(ptr>=max)
 			throw new OverflowIntStackException();
 		
 		return stk[ptr++]=x;
 	}
 	
-	public int pop() throws EmptyIntStackException{      // 데이터를 꺼내는 메서드
+	public int pop() throws EmptyIntStackException{      // 2)
 		if(ptr<=0)
 			throw new EmptyIntStackException();
 		
 		return stk[--ptr];
 	}
 	
-	public int peek() throws EmptyIntStackException{        //최상단에 위치한 데이터 확인
+	public int peek() throws EmptyIntStackException{        // 3)
 		if(ptr<=0)
 			throw new EmptyIntStackException();
 		
 		return stk[ptr-1];
 	}
 	
-	public int indexOf(int x) {
+	public int indexOf(int x) {    // 4)
 		for(int i=ptr-1; i>=0; i--) {
 			if(stk[i]==x)
 				return i;
@@ -54,27 +54,27 @@ public class IntStack {
 		return -1;
 	}
 	
-	public void clear() {
+	public void clear() {      // 5)
 		ptr=0;
 	}
 	
-	public int capacity() {
+	public int capacity() {       // 6)
 		return max;
 	}
 	
-	public int size() {
+	public int size() {         // 7)
 		return ptr;
 	}
 	
-	public boolean isFull() {
+	public boolean isFull() {     // 8)
 		return ptr>=max;
 	}
 	
-	public boolean isEmpty() {
+	public boolean isEmpty() {     // 9)
 		return ptr<=0;
 	}
 	
-	public void dump() {
+	public void dump() {      // 10)
 		if(ptr<=0)
 			System.out.println("스택이 비어 있습니다.");
 		else {

@@ -22,14 +22,14 @@ public class IntAryQueue {
 		}
 		// ↑ 예외처리 메서드
 		
-		public int enQueue(int x) throws OverflowIntQueueException{  
+		public int enQueue(int x) throws OverflowIntQueueException{  // 1)
 			if(num>=max)
 				throw new OverflowIntQueueException();
 			
 			return que[num++]=x;
 		}
 		
-		public int deQueue() throws EmptyIntQueueException{  
+		public int deQueue() throws EmptyIntQueueException{  // 2)
 			if(num<=0)
 				throw new EmptyIntQueueException();
 			
@@ -41,14 +41,14 @@ public class IntAryQueue {
 			return x;
 		}
 		
-		public int peek() throws EmptyIntQueueException{        //최상단에 위치한 데이터 확인
+		public int peek() throws EmptyIntQueueException{        //최상단에 위치한 데이터 확인 3)
 			if(num<=0)
 				throw new EmptyIntQueueException();
 			
 			return que[num-1];
 		}
 		
-		public int indexOf(int x) {
+		public int indexOf(int x) {            // 4)
 			for(int i=0; i<num; i++) {
 				if(que[i]==x)
 					return i;
@@ -56,27 +56,27 @@ public class IntAryQueue {
 			return -1;
 		}
 		
-		public void clear() {
+		public void clear() {    // 5)
 			num=0;
 		}
 		
-		public int capacity() {
+		public int capacity() {     // 6)
 			return max;
 		}
 		
-		public int size() {
+		public int size() {         // 7)
 			return num;
 		}
 		
-		public boolean isFull() {
+		public boolean isFull() {    // 8)
 			return num>=max;
 		}
 		
-		public boolean isEmpty() {
+		public boolean isEmpty() {    // 9)
 			return num<=0;
 		}
 		
-		public void dump() {
+		public void dump() {       // 10)
 			if(num<=0)
 				System.out.println("큐가 비어 있습니다.");
 			else {
