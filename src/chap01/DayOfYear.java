@@ -1,3 +1,4 @@
+package chap01;
 import java.util.Scanner;
 
 public class DayOfYear {
@@ -25,16 +26,16 @@ public class DayOfYear {
 		Scanner sc=new Scanner(System.in);
 		int retry;
 		
-		System.out.println("±× ÇØ °æ°ú ÀÏ¼ö ±¸ÇÏ±â");
+		System.out.println("ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ï¼ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½");
 		
 		do {
-			System.out.print("³â: "); int year=sc.nextInt();
-			System.out.print("¿ù: "); int month=sc.nextInt();
-			System.out.print("ÀÏ: "); int day=sc.nextInt();
+			System.out.print("ï¿½ï¿½: "); int year=sc.nextInt();
+			System.out.print("ï¿½ï¿½: "); int month=sc.nextInt();
+			System.out.print("ï¿½ï¿½: "); int day=sc.nextInt();
 			
-			System.out.printf("±× ÇØ %dÀÏÂ° ÀÔ´Ï´Ù.%n", dayOfYear(year,month,day));
+			System.out.printf("ï¿½ï¿½ ï¿½ï¿½ %dï¿½ï¿½Â° ï¿½Ô´Ï´ï¿½.%n", dayOfYear(year,month,day));
 			
-			System.out.println("ÇÑ ¹ø ´õ ÇÒ±î¿ä? (1.¿¹/2.¾Æ´Ï¿À): ");
+			System.out.println("ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ò±ï¿½ï¿½? (1.ï¿½ï¿½/2.ï¿½Æ´Ï¿ï¿½): ");
 			retry=sc.nextInt();
 		}while(retry==1);
 
